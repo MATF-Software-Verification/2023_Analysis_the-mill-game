@@ -79,3 +79,69 @@ komandom:
 
 - Takođe vidimo da imamo mogući gubitak 352 bajta. Kada ispitamo stek poziva vidimo da je mogući gubitak izazvao poziv funkcije __calloc__ čiji je krajnji pozivaoc konstruktor klase __MainMenu__ u __main__ funkciji projekta. Međutim, konstruktor klase __MainMenu__
 je funkcija biblioteke koje korisit razvojno okruženje __qt__. Time zaključujemo da ne postoji gubitak memorije koji je izazvan od strane programera. 
+
+## Valgrind - Massif
+- korišćenjem alata massif na projektu The Mill Game izvedena je analiza preseka stanja hipa programa tokom njegovog izvršavanja.
+
+- program je pokrenut u massifu korišćenjem komande:
+```
+valgrind --tool=massif ./NineMensMorris
+```
+- zatim je izlaz koji je dobijen iz massif-a korišćenjem programa ms_print prusmeren
+u datoteku __massif_graph.txt__ komandom:
+
+```
+ ms_print massif.out.283 > massif_graph.txt
+```
+- Graf dobijen iz analize massif-a:
+```
+--------------------------------------------------------------------------------
+Command:            ./NineMensMorris
+Massif arguments:   (none)
+ms_print arguments: massif.out.283
+--------------------------------------------------------------------------------
+
+
+    MB
+11.92^       #                                                                
+     |       #                  ::                    ::                    ::
+     |       #                  ::                    ::                    ::
+     |       #:                 :::                   ::                    ::
+     |   ::::#:::::::@::::::::::::::::::@:::@:::@:::@:::::::::@::::@::::@:::::
+     |   : ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@:::::
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@:::::
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@:::::
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@:::::
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@:::::
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@:::::
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@:::::
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@:::::
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@:::::
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@::::@
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@::::@
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@::::@
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@::::@
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@::::@
+     | ::: ::#::::: :@::::::: :::::: :: @:::@:::@:::@:::::::::@::::@::::@::::@
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   14.81
+
+Number of snapshots: 87
+ Detailed snapshots: [6 (peak), 14, 31, 35, 39, 43, 56, 66, 76, 86]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1    299,092,330        8,804,768        8,594,617       210,151            0
+  2    619,915,906        8,835,824        8,624,766       211,058            0
+  3    836,163,603       10,574,104        8,332,089     2,242,015            0
+  4  1,176,574,448       10,574,104        8,332,089     2,242,015            0
+  5  1,381,321,966       10,574,104        8,332,089     2,242,015            0
+  6  1,618,951,593       12,501,448       10,258,730     2,242,718            0
+```
+
+- Kao što vidimo massif je napravio 87 preseka hipa memorije i nama izdvojio samo neke od njih. Na grafu vidimo da je vrhunac u preseku 6 kada je potrošnja hipa oko 11.92 MB.
+Međutim i ostali preseci su slični po potrošnji i vidimo da nema nekih naglih skokova u korišćenju hip memorije.
+
+- Zaključujemo da se hip memorija uglavnom odgovorno koristi.
