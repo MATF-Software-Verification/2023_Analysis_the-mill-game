@@ -145,3 +145,37 @@ Number of snapshots: 87
 Međutim i ostali preseci su slični po potrošnji i vidimo da nema nekih naglih skokova u korišćenju hip memorije.
 
 - Zaključujemo da se hip memorija uglavnom odgovorno koristi.
+
+## Testiranje jedinica koda - QtTest
+
+- Korisćeno je radno okruženje *Qt Creator 5.0.3* da bismo napravili poseban projekat za testiranje projekta *The Mill Game*.
+
+- Tokom testiranja testirane su četiri klase projekta *The Mill Game*, to su:
+	- **Player**
+	- **Field**
+	- **GameMap**
+	- **Game**
+
+- Testovi koji su napisani su:
+```
+	void testPlayerId();
+    void testPlayerName(); 
+    void testPlayerNumOfPieces();
+    void testPlayerTurn();
+
+    void testFieldOccupied();
+    void testFieldPosition();
+    void testFieldNeighbourIndices();
+    void testFieldMills();
+
+    void testGameMapInitializeFields();
+    void testGameMapInitializePieces();
+    void testGameMapInitializeMills();
+
+    void testGameWinner();
+    void testGameMessage();
+```
+
+- Kada pokrenemo projekat možemo da vidimo da se svi testovi završavaju uspešno.
+
+![image](./pictures/qt_test.png)
