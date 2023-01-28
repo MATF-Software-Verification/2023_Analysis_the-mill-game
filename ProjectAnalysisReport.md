@@ -157,25 +157,88 @@ Međutim i ostali preseci su slični po potrošnji i vidimo da nema nekih naglih
 	- **Game**
 
 - Testovi koji su napisani su:
-```
-	void testPlayerId();
-    void testPlayerName(); 
-    void testPlayerNumOfPieces();
-    void testPlayerTurn();
 
-    void testFieldOccupied();
-    void testFieldPosition();
-    void testFieldNeighbourIndices();
-    void testFieldMills();
+	- void **testPlayerId()**
+      - testira funkcije vezane za člansku promenljivu *id* klase *Player*.
+  - void **testPlayerName()** 
+      - testira funkcije vezane za člansku promenljivu *name* klase *Player*.
+  - void **testPlayerNumOfPieces()**
+      - testira funkcije koje regulišu broj figura koje igrač ima.
+  - void **testPlayerTurn()**
+      - testira funkcije koje upravljaju time čiji je red da igra.
 
-    void testGameMapInitializeFields();
-    void testGameMapInitializePieces();
-    void testGameMapInitializeMills();
+  &nbsp;
 
-    void testGameWinner();
-    void testGameMessage();
-```
+  - void **testFieldOccupied()**
+      - testira funkcije koje upravljaju time da li je polje na tabli zauzeto ili ne.
+
+  - void **testFieldPosition()**
+      - tesitra funkcije vezane za člansku promenljivu *position* klase *Field*
+
+  - void **testFieldNeighbourIndices()**
+      - testira funkcije koje dodaju i dohvataju listu susednih polja nekog polja.
+  - void **testFieldMills()**
+      - testira funkcije koje postavljaju odgovarajuće vertikalne i horizontalne parove nekog polja.
+
+  &nbsp;
+
+  - void **testGameMapInitializeFields()**
+      - testira da li mapa pravilno inicijalizuje sva polja i da sva polja imaju odgovarajući broj suseda.
+  - void **testGameMapInitializePieces()**
+      - testira da li mapa pravilno inicijalizuje broj figra za oba igrača i da li ih je jednako.
+  - void **testGameMapInitializeMills()**
+      - testira da li mapa inicijalizuje kombinacije za svako polje.
+
+  &nbsp;
+
+  - void **testGameWinner()**
+      - testira funkcije za postavljanje pobednika.
+
+  - void **testGameMessage()**
+      - testira funkcije za postavljanje poruka za igru i poruka za grešku programa.
+
+&nbsp;
 
 - Kada pokrenemo projekat možemo da vidimo da se svi testovi završavaju uspešno.
 
 ![image](./pictures/qt_test.png)
+
+- Zaključak: Sve testirane funkcije rade u skladu sa njihovim očekivanim ponašanjem.
+
+## Clang statička analiza (scan-build)
+
+- Korišćen je clang statički analizator za pronalaženje grešaka u projektu the mill game.
+Za analizu je koriščen alata clanga koji se zove *scan-build*. Cilj je bio da statičkom analizom pronađemo neki propust u kodu koji ovaj alat može da pronađe.
+
+- pri poretanju *CMake* programa korišćena je komanda: 
+```
+scan-build --use-c++=g++ cmake ../02-the-mill-game/ -Bbuild
+```
+- dok je pri kompajliranju korišćena komanda:
+```
+scan-build --use-c++=g++ make -C build
+```
+- kodu je trebalo značajno duže vremena da se izgradi nego inače (pet minuta, umesto za oko desetak sekundi).
+
+![image](./pictures/scan_build_terminal1.png)
+
+- Na kraju smo dobili obaveštenje da je gotova analiza i gde se nalazi izveštaj.
+
+![image](./pictures/scan_build_terminal2.png)
+
+- Na kraju pokrećemo preporučenu komandu:
+```
+    scan-view /tmp/scan-build-2023-01-29-001204-1720-1
+```
+
+- i dobijamo izveštaj:
+![image](./pictures/scan_build.png)
+
+- Kao što vidimo, postoji samo jedan bag u izveštaju. Imamo mrtvu inicijalizaciju u fajlu *GameAi.cpp* na liniji 286. To je kada se inicijalizuje neka promenljiva koja se posle nikada ne koristi u okviru u kom je definisana.
+
+- Ako odemo u kodu na tu liniju vidimo da na toj liniji postoji promenljiva *player* koja se inicijalizuje na vrednost *playerAI* i koja se više ne referiše u toj funkciji, što potvrđuje konstataciju statičkog analizatora.
+
+![image](./pictures/bug_code_2.png)
+
+- **Zaključak**: statička analiza koda nije otkrila puno nedostataka u samom kodu osim jedne loše inicijalizacije.
+
