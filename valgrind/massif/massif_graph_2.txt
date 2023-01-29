@@ -1,0 +1,1132 @@
+--------------------------------------------------------------------------------
+Command:            ./NineMensMorris
+Massif arguments:   --stacks=yes
+ms_print arguments: massif.out.435
+--------------------------------------------------------------------------------
+
+
+    MB
+11.88^                                       :                                
+     |      #: :  @  :::  :::  :::  :  :   ::::::::::::::::::::::@::::::@:::::
+     |      #: :  @  : :  : :  : :  :  :   :::: :: :::::: :::::::@::::::@:::::
+     |      #:::::@::: :::: :::: ::::@@:::::::: :: :::::: :::::::@::::::@:::::
+     | :: ::#:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | :  : #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   7.194
+
+Number of snapshots: 62
+ Detailed snapshots: [4 (peak), 9, 22, 47, 55]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1    158,158,623       10,074,544        9,868,277       194,099       12,168
+  2    356,616,563        8,785,312        8,577,734       195,306       12,272
+  3    535,759,662       10,113,080        9,903,837       196,227       13,016
+  4    679,344,638       12,430,648       12,221,208       196,192       13,248
+98.32% (12,221,208B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.34% (5,760,000B) 0x918A24B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| ->46.34% (5,760,000B) 0x918BF7A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|   ->46.34% (5,760,000B) 0x538078C: QBackingStore::resize(QSize const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|     ->46.34% (5,760,000B) 0x49CED47: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|       ->46.34% (5,760,000B) 0x49D03D9: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|         ->46.34% (5,760,000B) 0x4A1E8DB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|           ->46.34% (5,760,000B) 0x4A1F2CF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|             ->46.34% (5,760,000B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|               ->46.34% (5,760,000B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                 ->46.34% (5,760,000B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                   ->46.34% (5,760,000B) 0x51D6DE5: QGuiApplicationPrivate::processExposeEvent(QWindowSystemInterfacePrivate::ExposeEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                     ->46.34% (5,760,000B) 0x51D7013: QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                       ->46.34% (5,760,000B) 0x51B135A: QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                         ->46.34% (5,760,000B) 0x919932D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                           ->46.34% (5,760,000B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                             ->46.34% (5,760,000B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                               ->46.34% (5,760,000B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                                 ->46.34% (5,760,000B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                   ->46.34% (5,760,000B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                     ->46.34% (5,760,000B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                       ->46.34% (5,760,000B) 0x127F83: main (main.cpp:12)
+|                                         
+->21.01% (2,611,540B) 0x521D69F: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+| ->21.01% (2,611,540B) 0x521D7CE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   ->12.61% (1,567,504B) 0xADF17C1: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/imageformats/libqjpeg.so)
+|   | ->12.61% (1,567,504B) 0xADF304E: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/imageformats/libqjpeg.so)
+|   |   ->12.61% (1,567,504B) 0x524472C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |     ->12.61% (1,567,504B) 0x5244EB8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |       ->12.61% (1,567,504B) 0x521D22A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |         ->12.61% (1,567,504B) 0x118431: GraphicPiece::paint(QPainter*, QStyleOptionGraphicsItem const*, QWidget*) (GraphicPiece.cpp:27)
+|   |           ->12.61% (1,567,504B) 0x4CF432B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |             ->12.61% (1,567,504B) 0x4CF51EF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |               ->12.61% (1,567,504B) 0x4CF5741: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                 ->12.61% (1,567,504B) 0x4D199F8: QGraphicsView::paintEvent(QPaintEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                   ->12.61% (1,567,504B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                     ->12.61% (1,567,504B) 0x4AADD51: QFrame::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       ->12.61% (1,567,504B) 0x4D18420: QGraphicsView::viewportEvent(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                         ->12.61% (1,567,504B) 0x592051A: QCoreApplicationPrivate::sendThroughObjectEventFilters(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                           ->12.61% (1,567,504B) 0x49BDA54: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                             ->12.61% (1,567,504B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                               ->12.61% (1,567,504B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                                 ->12.61% (1,567,504B) 0x49F8F49: QWidgetPrivate::sendPaintEvent(QRegion const&) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                   ->12.61% (1,567,504B) 0x49F9798: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                     ->12.61% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                       ->12.61% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                         ->12.61% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                           ->12.61% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                             ->12.61% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                               ->12.61% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                 ->12.61% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                   ->12.61% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                     ->12.61% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                     | 
+|   |                                                     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |                                                     
+|   ->05.47% (680,424B) 0x521D80C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | ->03.34% (415,080B) 0x5220EF5: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | | ->03.34% (415,080B) 0x5262056: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |   ->03.34% (415,080B) 0x526234D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |     ->03.34% (415,080B) 0x5259242: QPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |       ->03.34% (415,080B) 0x525A510: QPixmap::convertFromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |         ->03.34% (415,080B) 0x52659C6: QPixmapIconEngine::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |           ->03.34% (415,080B) 0x5268971: QIcon::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |             ->01.63% (202,500B) 0x12A4F6: Ui_Board::setupUi(QMainWindow*) (ui_board.h:64)
+|   | |             | ->01.63% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.63% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.63% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.63% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.63% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.63% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.63% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.63% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.63% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.63% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.63% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.63% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.63% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.63% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.63% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.63% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.63% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.63% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.63% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->01.63% (202,500B) 0x12A687: Ui_Board::setupUi(QMainWindow*) (ui_board.h:73)
+|   | |             | ->01.63% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.63% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.63% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.63% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.63% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.63% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.63% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.63% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.63% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.63% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.63% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.63% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.63% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.63% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.63% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.63% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.63% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.63% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.63% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->00.08% (10,080B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |             
+|   | ->02.11% (262,144B) 0x5285238: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | | ->02.11% (262,144B) 0x5285916: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |   ->02.11% (262,144B) 0x524472C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |     ->02.11% (262,144B) 0x5244EB8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |       ->02.11% (262,144B) 0x521D22A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |       | ->02.11% (262,144B) 0x1184C7: GraphicPiece::paint(QPainter*, QStyleOptionGraphicsItem const*, QWidget*) (GraphicPiece.cpp:33)
+|   | |       | | ->02.11% (262,144B) 0x4CF432B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |   ->02.11% (262,144B) 0x4CF51EF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |     ->02.11% (262,144B) 0x4CF5741: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |       ->02.11% (262,144B) 0x4D199F8: QGraphicsView::paintEvent(QPaintEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |         ->02.11% (262,144B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |           ->02.11% (262,144B) 0x4AADD51: QFrame::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |             ->02.11% (262,144B) 0x4D18420: QGraphicsView::viewportEvent(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |               ->02.11% (262,144B) 0x592051A: QCoreApplicationPrivate::sendThroughObjectEventFilters(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |       | |                 ->02.11% (262,144B) 0x49BDA54: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                   ->02.11% (262,144B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                     ->02.11% (262,144B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |       | |                       ->02.11% (262,144B) 0x49F8F49: QWidgetPrivate::sendPaintEvent(QRegion const&) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                         ->02.11% (262,144B) 0x49F9798: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                           ->02.11% (262,144B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                             ->02.11% (262,144B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                               ->02.11% (262,144B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                 ->02.11% (262,144B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                   ->02.11% (262,144B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                     ->02.11% (262,144B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                       ->02.11% (262,144B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                         ->02.11% (262,144B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                           
+|   | |       | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |       | 
+|   | |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |       
+|   | ->00.03% (3,200B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->02.93% (363,612B) 0x4AA3687: QFusionStyle::drawPrimitive(QStyle::PrimitiveElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|     ->02.93% (363,612B) 0x4A408B0: QCommonStyle::drawControl(QStyle::ControlElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|       ->02.93% (363,612B) 0x4A9B13E: QFusionStyle::drawControl(QStyle::ControlElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|         ->02.93% (363,612B) 0x4A9B19C: QFusionStyle::drawControl(QStyle::ControlElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|           ->02.93% (363,612B) 0x4B55B91: QPushButton::paintEvent(QPaintEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|             ->02.93% (363,612B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|               ->02.93% (363,612B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                 ->02.93% (363,612B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                   ->02.93% (363,612B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                     ->02.93% (363,612B) 0x49F8F49: QWidgetPrivate::sendPaintEvent(QRegion const&) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                       ->02.93% (363,612B) 0x49F9798: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                         ->02.93% (363,612B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           ->02.14% (265,908B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           | ->02.14% (265,908B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   ->02.03% (251,808B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | ->01.57% (195,408B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | | ->01.57% (195,408B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |   ->01.57% (195,408B) 0x49CFBFB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |     ->01.57% (195,408B) 0x49CFDC0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |       ->01.57% (195,408B) 0x49E8384: QWidgetPrivate::syncBackingStore() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |         ->01.57% (195,408B) 0x4A00CAB: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |           ->01.57% (195,408B) 0x4B15147: QMainWindow::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |             ->01.57% (195,408B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |               ->01.57% (195,408B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |                 ->01.57% (195,408B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           |   | |                   ->01.18% (146,556B) 0x5923487: QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           |   | |                   | ->01.18% (146,556B) 0x5978E36: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           |   | |                   |   ->01.18% (146,556B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                           |   | |                   |     
+|                           |   | |                   ->00.39% (48,852B) in 1+ places, all below ms_print's threshold (01.00%)
+|                           |   | |                   
+|                           |   | ->00.45% (56,400B) in 1+ places, all below ms_print's threshold (01.00%)
+|                           |   | 
+|                           |   ->00.11% (14,100B) in 1+ places, all below ms_print's threshold (01.00%)
+|                           |   
+|                           ->00.79% (97,704B) in 1+ places, all below ms_print's threshold (01.00%)
+|                           
+->17.01% (2,114,496B) 0x57642DF: QArrayData::reallocateUnaligned(QArrayData*, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| ->17.01% (2,114,112B) 0x5766451: QByteArray::reallocData(unsigned int, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | ->17.01% (2,114,112B) 0x5766610: QByteArray::resize(int) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | ->17.00% (2,113,536B) 0x918ABC0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | | ->17.00% (2,113,536B) 0x918B01A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | |   ->17.00% (2,113,536B) 0x918B4E6: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | |     ->17.00% (2,113,536B) 0x918BA9F: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | |       ->17.00% (2,113,536B) 0x538190E: QBackingStore::flush(QRegion const&, QWindow*, QPoint const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+| | | |         ->17.00% (2,113,536B) 0x49CCF4A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |           ->17.00% (2,113,536B) 0x49CE897: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |             ->17.00% (2,113,536B) 0x49CFC10: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |               ->17.00% (2,113,536B) 0x49CFDC0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                 ->17.00% (2,113,536B) 0x49E8384: QWidgetPrivate::syncBackingStore() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                   ->17.00% (2,113,536B) 0x4A00CAB: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                     ->17.00% (2,113,536B) 0x4B15147: QMainWindow::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                       ->17.00% (2,113,536B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                         ->17.00% (2,113,536B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                           ->17.00% (2,113,536B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             ->16.87% (2,097,152B) 0x5923487: QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | ->16.87% (2,097,152B) 0x4CE644A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | | ->16.87% (2,097,152B) 0x4CEC14C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |   ->16.87% (2,097,152B) 0x594CC29: QObject::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |     ->16.87% (2,097,152B) 0x4CF9FB2: QGraphicsScene::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |       ->16.87% (2,097,152B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |         ->16.87% (2,097,152B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |           ->16.87% (2,097,152B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |             ->16.87% (2,097,152B) 0x5923487: QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |               ->16.87% (2,097,152B) 0x5978E36: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |                 ->16.87% (2,097,152B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+| | | |                             | |                   ->16.87% (2,097,152B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+| | | |                             | |                     
+| | | |                             | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | |                             | 
+| | | |                             ->00.13% (16,384B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | |                             
+| | | ->00.00% (576B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.00% (384B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->08.48% (1,053,638B) in 772 places, all below massif's threshold (1.00%)
+| 
+->03.97% (493,374B) 0x5764240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| ->02.64% (327,954B) in 79 places, all below massif's threshold (1.00%)
+| | 
+| ->01.33% (165,420B) 0x9116A2D: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|   ->01.33% (165,420B) 0x91166E0: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|     ->01.33% (165,420B) 0x911334A: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|       ->01.33% (165,420B) 0x9175B25: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|         ->01.33% (165,420B) 0x9175DDC: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|           ->01.33% (165,420B) 0x916E09D: QXcbConnection::handleXcbEvent(xcb_generic_event_t*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|             ->01.33% (165,420B) 0x916E789: QXcbConnection::processXcbEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|               ->01.33% (165,420B) 0x9199326: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                 ->01.33% (165,420B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                   ->01.33% (165,420B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                     ->01.33% (165,420B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                       ->01.33% (165,420B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                         ->01.33% (165,420B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           ->01.33% (165,420B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                             ->01.33% (165,420B) 0x127F83: main (main.cpp:12)
+|                               
+->01.51% (188,160B) 0xB0216F6: ???
+  ->01.51% (188,160B) 0xB02235B: ???
+    ->01.03% (127,680B) 0xB022657: ???
+    | ->01.03% (127,680B) 0xB025961: ???
+    |   ->01.03% (127,680B) 0xB022C0A: ???
+    |     ->01.03% (127,680B) 0xB01E653: ???
+    |       ->01.03% (127,680B) 0xB01EBF1: ???
+    |         ->01.03% (127,680B) 0xAFC15D2: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+    |           ->01.03% (127,680B) 0x9186868: QXcbWindow::create() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |             ->01.03% (127,680B) 0x9171915: QXcbIntegration::createPlatformWindow(QWindow*) const (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |               ->01.03% (127,680B) 0x51DEE14: QWindowPrivate::create(bool, unsigned long long) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    |                 ->01.03% (127,680B) 0x49F2807: QWidgetPrivate::create() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                   ->01.03% (127,680B) 0x49F2E0D: QWidget::create(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                     ->01.03% (127,680B) 0x49FFC4A: QWidgetPrivate::setVisible(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                       ->01.03% (127,680B) 0x127F7E: main (main.cpp:11)
+    |                         
+    ->00.49% (60,480B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  5    827,401,122       12,206,600       11,997,560       196,280       12,760
+  6    919,875,185       10,910,256       10,699,561       196,271       14,424
+  7  1,055,126,774       12,206,320       11,997,624       196,248       12,448
+  8  1,178,987,838       10,905,272       10,696,108       196,212       12,952
+  9  1,362,233,868       12,160,424       10,357,563     1,768,717       34,144
+85.17% (10,357,563B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.37% (5,760,000B) 0x918A24B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| ->47.37% (5,760,000B) 0x918BF7A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|   ->47.37% (5,760,000B) 0x538078C: QBackingStore::resize(QSize const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|     ->47.37% (5,760,000B) 0x49CED47: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|       ->47.37% (5,760,000B) 0x49D03D9: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|         ->47.37% (5,760,000B) 0x4A1E8DB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|           ->47.37% (5,760,000B) 0x4A1F2CF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|             ->47.37% (5,760,000B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|               ->47.37% (5,760,000B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                 ->47.37% (5,760,000B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                   ->47.37% (5,760,000B) 0x51D6DE5: QGuiApplicationPrivate::processExposeEvent(QWindowSystemInterfacePrivate::ExposeEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                     ->47.37% (5,760,000B) 0x51D7013: QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                       ->47.37% (5,760,000B) 0x51B135A: QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                         ->47.37% (5,760,000B) 0x919932D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                           ->47.37% (5,760,000B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                             ->47.37% (5,760,000B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                               ->47.37% (5,760,000B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                                 ->47.37% (5,760,000B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                   ->47.37% (5,760,000B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                     ->47.37% (5,760,000B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                       ->47.37% (5,760,000B) 0x127F83: main (main.cpp:12)
+|                                         
+->19.32% (2,349,396B) 0x521D69F: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+| ->19.32% (2,349,396B) 0x521D7CE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   ->12.89% (1,567,504B) 0xADF17C1: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/imageformats/libqjpeg.so)
+|   | ->12.89% (1,567,504B) 0xADF304E: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/imageformats/libqjpeg.so)
+|   |   ->12.89% (1,567,504B) 0x524472C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |     ->12.89% (1,567,504B) 0x5244EB8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |       ->12.89% (1,567,504B) 0x521D22A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |         ->12.89% (1,567,504B) 0x118431: GraphicPiece::paint(QPainter*, QStyleOptionGraphicsItem const*, QWidget*) (GraphicPiece.cpp:27)
+|   |           ->12.89% (1,567,504B) 0x4CF432B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |             ->12.89% (1,567,504B) 0x4CF51EF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |               ->12.89% (1,567,504B) 0x4CF5741: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                 ->12.89% (1,567,504B) 0x4D199F8: QGraphicsView::paintEvent(QPaintEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                   ->12.89% (1,567,504B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                     ->12.89% (1,567,504B) 0x4AADD51: QFrame::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       ->12.89% (1,567,504B) 0x4D18420: QGraphicsView::viewportEvent(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                         ->12.89% (1,567,504B) 0x592051A: QCoreApplicationPrivate::sendThroughObjectEventFilters(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                           ->12.89% (1,567,504B) 0x49BDA54: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                             ->12.89% (1,567,504B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                               ->12.89% (1,567,504B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                                 ->12.89% (1,567,504B) 0x49F8F49: QWidgetPrivate::sendPaintEvent(QRegion const&) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                   ->12.89% (1,567,504B) 0x49F9798: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                     ->12.89% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                       ->12.89% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                         ->12.89% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                           ->12.89% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                             ->12.89% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                               ->12.89% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                 ->12.89% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                   ->12.89% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                     ->12.89% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                     | 
+|   |                                                     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |                                                     
+|   ->03.44% (418,280B) 0x521D80C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | ->03.41% (415,080B) 0x5220EF5: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | | ->03.41% (415,080B) 0x5262056: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |   ->03.41% (415,080B) 0x526234D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |     ->03.41% (415,080B) 0x5259242: QPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |       ->03.41% (415,080B) 0x525A510: QPixmap::convertFromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |         ->03.41% (415,080B) 0x52659C6: QPixmapIconEngine::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |           ->03.41% (415,080B) 0x5268971: QIcon::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |             ->01.67% (202,500B) 0x12A4F6: Ui_Board::setupUi(QMainWindow*) (ui_board.h:64)
+|   | |             | ->01.67% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.67% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.67% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.67% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.67% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.67% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.67% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.67% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.67% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.67% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.67% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.67% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.67% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.67% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.67% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.67% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.67% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.67% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.67% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->01.67% (202,500B) 0x12A687: Ui_Board::setupUi(QMainWindow*) (ui_board.h:73)
+|   | |             | ->01.67% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.67% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.67% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.67% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.67% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.67% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.67% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.67% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.67% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.67% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.67% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.67% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.67% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.67% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.67% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.67% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.67% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.67% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.67% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->00.08% (10,080B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |             
+|   | ->00.03% (3,200B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->02.99% (363,612B) 0x4AA3687: QFusionStyle::drawPrimitive(QStyle::PrimitiveElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|     ->02.99% (363,612B) 0x4A408B0: QCommonStyle::drawControl(QStyle::ControlElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|       ->02.99% (363,612B) 0x4A9B13E: QFusionStyle::drawControl(QStyle::ControlElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|         ->02.99% (363,612B) 0x4A9B19C: QFusionStyle::drawControl(QStyle::ControlElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|           ->02.99% (363,612B) 0x4B55B91: QPushButton::paintEvent(QPaintEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|             ->02.99% (363,612B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|               ->02.99% (363,612B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                 ->02.99% (363,612B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                   ->02.99% (363,612B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                     ->02.99% (363,612B) 0x49F8F49: QWidgetPrivate::sendPaintEvent(QRegion const&) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                       ->02.99% (363,612B) 0x49F9798: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                         ->02.99% (363,612B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           ->02.19% (265,908B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           | ->02.19% (265,908B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   ->02.07% (251,808B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | ->01.61% (195,408B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | | ->01.61% (195,408B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |   ->01.61% (195,408B) 0x49CFBFB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |     ->01.61% (195,408B) 0x49CFDC0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |       ->01.61% (195,408B) 0x49E8384: QWidgetPrivate::syncBackingStore() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |         ->01.61% (195,408B) 0x4A00CAB: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |           ->01.61% (195,408B) 0x4B15147: QMainWindow::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |             ->01.61% (195,408B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |               ->01.61% (195,408B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                           |   | |                 ->01.61% (195,408B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           |   | |                   ->01.21% (146,556B) 0x5923487: QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           |   | |                   | ->01.21% (146,556B) 0x5978E36: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           |   | |                   |   ->01.21% (146,556B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                           |   | |                   |     
+|                           |   | |                   ->00.40% (48,852B) in 1+ places, all below ms_print's threshold (01.00%)
+|                           |   | |                   
+|                           |   | ->00.46% (56,400B) in 1+ places, all below ms_print's threshold (01.00%)
+|                           |   | 
+|                           |   ->00.12% (14,100B) in 1+ places, all below ms_print's threshold (01.00%)
+|                           |   
+|                           ->00.80% (97,704B) in 1+ places, all below ms_print's threshold (01.00%)
+|                           
+->08.56% (1,041,322B) in 772 places, all below massif's threshold (1.00%)
+| 
+->04.46% (541,760B) 0x57642DF: QArrayData::reallocateUnaligned(QArrayData*, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| ->04.45% (541,120B) 0x5766451: QByteArray::reallocData(unsigned int, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | ->04.45% (541,120B) 0x5766610: QByteArray::resize(int) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | ->04.45% (540,672B) 0x918ABC0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | | ->04.45% (540,672B) 0x918B01A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | |   ->04.45% (540,672B) 0x918B4E6: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | |     ->04.45% (540,672B) 0x918BA9F: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | |       ->04.45% (540,672B) 0x538190E: QBackingStore::flush(QRegion const&, QWindow*, QPoint const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+| | | |         ->04.45% (540,672B) 0x49CCF4A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |           ->04.45% (540,672B) 0x49CE897: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |             ->04.45% (540,672B) 0x49CFC10: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |               ->04.45% (540,672B) 0x49CFDC0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                 ->04.45% (540,672B) 0x49E8384: QWidgetPrivate::syncBackingStore() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                   ->04.45% (540,672B) 0x4A00CAB: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                     ->04.45% (540,672B) 0x4B15147: QMainWindow::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                       ->04.45% (540,672B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                         ->04.45% (540,672B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                           ->04.45% (540,672B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             ->04.31% (524,288B) 0x5923487: QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | ->04.31% (524,288B) 0x4CE644A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | | ->04.31% (524,288B) 0x4CEC14C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |   ->04.31% (524,288B) 0x594CC29: QObject::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |     ->04.31% (524,288B) 0x4CF9FB2: QGraphicsScene::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |       ->04.31% (524,288B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |         ->04.31% (524,288B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |           ->04.31% (524,288B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |             ->04.31% (524,288B) 0x5923487: QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |               ->04.31% (524,288B) 0x5978E36: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |                 ->04.31% (524,288B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+| | | |                             | |                   ->04.31% (524,288B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+| | | |                             | |                     
+| | | |                             | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | |                             | 
+| | | |                             ->00.13% (16,384B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | |                             
+| | | ->00.00% (448B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.01% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.92% (476,925B) 0x5764240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| ->02.56% (311,505B) in 79 places, all below massif's threshold (1.00%)
+| | 
+| ->01.36% (165,420B) 0x9116A2D: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|   ->01.36% (165,420B) 0x91166E0: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|     ->01.36% (165,420B) 0x911334A: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|       ->01.36% (165,420B) 0x9175B25: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|         ->01.36% (165,420B) 0x9175DDC: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|           ->01.36% (165,420B) 0x916E09D: QXcbConnection::handleXcbEvent(xcb_generic_event_t*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|             ->01.36% (165,420B) 0x916E789: QXcbConnection::processXcbEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|               ->01.36% (165,420B) 0x9199326: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                 ->01.36% (165,420B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                   ->01.36% (165,420B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                     ->01.36% (165,420B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                       ->01.36% (165,420B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                         ->01.36% (165,420B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           ->01.36% (165,420B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                             ->01.36% (165,420B) 0x127F83: main (main.cpp:12)
+|                               
+->01.55% (188,160B) 0xB0216F6: ???
+  ->01.55% (188,160B) 0xB02235B: ???
+    ->01.05% (127,680B) 0xB022657: ???
+    | ->01.05% (127,680B) 0xB025961: ???
+    |   ->01.05% (127,680B) 0xB022C0A: ???
+    |     ->01.05% (127,680B) 0xB01E653: ???
+    |       ->01.05% (127,680B) 0xB01EBF1: ???
+    |         ->01.05% (127,680B) 0xAFC15D2: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+    |           ->01.05% (127,680B) 0x9186868: QXcbWindow::create() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |             ->01.05% (127,680B) 0x9171915: QXcbIntegration::createPlatformWindow(QWindow*) const (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |               ->01.05% (127,680B) 0x51DEE14: QWindowPrivate::create(bool, unsigned long long) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    |                 ->01.05% (127,680B) 0x49F2807: QWidgetPrivate::create() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                   ->01.05% (127,680B) 0x49F2E0D: QWidget::create(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                     ->01.05% (127,680B) 0x49FFC4A: QWidgetPrivate::setVisible(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                       ->01.05% (127,680B) 0x127F7E: main (main.cpp:11)
+    |                         
+    ->00.50% (60,480B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 10  1,461,501,840       10,905,720        9,123,561     1,769,207       12,952
+ 11  1,633,562,554       12,209,696       10,164,572     2,032,108       13,016
+ 12  1,831,449,452       12,192,168       10,148,208     2,032,480       11,480
+ 13  2,010,558,760       10,895,760        8,850,209     2,032,407       13,144
+ 14  2,208,876,200       12,190,496       11,979,818       197,926       12,752
+ 15  2,369,399,978       12,190,736       10,144,686     2,032,986       13,064
+ 16  2,562,187,078       10,888,160        8,842,311     2,032,897       12,952
+ 17  2,688,349,477       12,190,400       10,144,566     2,033,026       12,808
+ 18  2,782,971,062       12,190,040       10,144,566     2,033,026       12,448
+ 19  2,909,130,794       12,190,104       10,144,202     2,033,014       12,888
+ 20  3,100,369,648       10,889,816        8,843,787     2,033,077       12,952
+ 21  3,226,531,158       12,191,128       10,145,142     2,033,058       12,928
+ 22  3,352,691,084       10,894,200        8,846,882     2,032,942       14,376
+81.21% (8,846,882B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->52.87% (5,760,000B) 0x918A24B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| ->52.87% (5,760,000B) 0x918BF7A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|   ->52.87% (5,760,000B) 0x538078C: QBackingStore::resize(QSize const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|     ->52.87% (5,760,000B) 0x49CED47: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|       ->52.87% (5,760,000B) 0x49D03D9: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|         ->52.87% (5,760,000B) 0x4A1E8DB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|           ->52.87% (5,760,000B) 0x4A1F2CF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|             ->52.87% (5,760,000B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|               ->52.87% (5,760,000B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                 ->52.87% (5,760,000B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                   ->52.87% (5,760,000B) 0x51D6DE5: QGuiApplicationPrivate::processExposeEvent(QWindowSystemInterfacePrivate::ExposeEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                     ->52.87% (5,760,000B) 0x51D7013: QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                       ->52.87% (5,760,000B) 0x51B135A: QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                         ->52.87% (5,760,000B) 0x919932D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                           ->52.87% (5,760,000B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                             ->52.87% (5,760,000B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                               ->52.87% (5,760,000B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                                 ->52.87% (5,760,000B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                   ->52.87% (5,760,000B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                     ->52.87% (5,760,000B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                       ->52.87% (5,760,000B) 0x127F83: main (main.cpp:12)
+|                                         
+->10.31% (1,123,472B) in 777 places, all below massif's threshold (1.00%)
+| 
+->09.15% (996,336B) 0x521D69F: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+| ->09.15% (996,336B) 0x521D7CE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   ->06.26% (681,576B) 0x521D80C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | ->03.81% (415,080B) 0x5220EF5: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | | ->03.81% (415,080B) 0x5262056: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |   ->03.81% (415,080B) 0x526234D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |     ->03.81% (415,080B) 0x5259242: QPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |       ->03.81% (415,080B) 0x525A510: QPixmap::convertFromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |         ->03.81% (415,080B) 0x52659C6: QPixmapIconEngine::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |           ->03.81% (415,080B) 0x5268971: QIcon::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |             ->01.86% (202,500B) 0x12A4F6: Ui_Board::setupUi(QMainWindow*) (ui_board.h:64)
+|   | |             | ->01.86% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.86% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.86% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.86% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.86% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.86% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.86% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.86% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.86% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.86% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.86% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.86% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.86% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.86% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.86% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.86% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.86% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.86% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.86% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->01.86% (202,500B) 0x12A687: Ui_Board::setupUi(QMainWindow*) (ui_board.h:73)
+|   | |             | ->01.86% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.86% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.86% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.86% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.86% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.86% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.86% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.86% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.86% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.86% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.86% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.86% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.86% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.86% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.86% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.86% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.86% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.86% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.86% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->00.09% (10,080B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |             
+|   | ->02.41% (262,144B) 0x5285238: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | | ->02.41% (262,144B) 0x5285916: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |   ->02.41% (262,144B) 0x524472C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |     ->02.41% (262,144B) 0x5244EB8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |       ->02.41% (262,144B) 0x521D22A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |       | ->02.41% (262,144B) 0x12E2CD: Piece::paint(QPainter*, QStyleOptionGraphicsItem const*, QWidget*) (Piece.cpp:22)
+|   | |       | | ->02.41% (262,144B) 0x4CF432B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |   ->02.41% (262,144B) 0x4CF51EF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |     ->02.41% (262,144B) 0x4CF5741: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |       ->02.41% (262,144B) 0x4D199F8: QGraphicsView::paintEvent(QPaintEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |         ->02.41% (262,144B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |           ->02.41% (262,144B) 0x4AADD51: QFrame::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |             ->02.41% (262,144B) 0x4D18420: QGraphicsView::viewportEvent(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |               ->02.41% (262,144B) 0x592051A: QCoreApplicationPrivate::sendThroughObjectEventFilters(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |       | |                 ->02.41% (262,144B) 0x49BDA54: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                   ->02.41% (262,144B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                     ->02.41% (262,144B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |       | |                       ->02.41% (262,144B) 0x49F8F49: QWidgetPrivate::sendPaintEvent(QRegion const&) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                         ->02.41% (262,144B) 0x49F9798: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                           ->02.41% (262,144B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                             ->02.41% (262,144B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                               ->02.41% (262,144B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                 ->02.41% (262,144B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                   ->02.41% (262,144B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                     ->02.41% (262,144B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                       ->02.41% (262,144B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                         ->02.41% (262,144B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |       | |                                           
+|   | |       | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |       | 
+|   | |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |       
+|   | ->00.04% (4,352B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->02.89% (314,760B) 0x4AA3687: QFusionStyle::drawPrimitive(QStyle::PrimitiveElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | ->02.89% (314,760B) 0x4A408B0: QCommonStyle::drawControl(QStyle::ControlElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |   ->02.89% (314,760B) 0x4A9B13E: QFusionStyle::drawControl(QStyle::ControlElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |     ->02.89% (314,760B) 0x4A9B19C: QFusionStyle::drawControl(QStyle::ControlElement, QStyleOption const*, QPainter*, QWidget const*) const (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |       ->02.89% (314,760B) 0x4B55B91: QPushButton::paintEvent(QPaintEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |         ->02.89% (314,760B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |           ->02.89% (314,760B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |             ->02.89% (314,760B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |               ->02.89% (314,760B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                 ->02.89% (314,760B) 0x49F8F49: QWidgetPrivate::sendPaintEvent(QRegion const&) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                   ->02.89% (314,760B) 0x49F9798: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                     ->02.89% (314,760B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       ->02.44% (265,908B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       | ->02.44% (265,908B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   ->02.31% (251,808B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | ->01.79% (195,408B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | | ->01.79% (195,408B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | |   ->01.79% (195,408B) 0x49CFBFB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | |     ->01.79% (195,408B) 0x49CFDC0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | |       ->01.79% (195,408B) 0x49E8384: QWidgetPrivate::syncBackingStore() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | |         ->01.79% (195,408B) 0x4A00CAB: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | |           ->01.79% (195,408B) 0x4B15147: QMainWindow::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | |             ->01.79% (195,408B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | |               ->01.79% (195,408B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       |   | |                 ->01.79% (195,408B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                       |   | |                   ->01.35% (146,556B) 0x5923487: QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                       |   | |                   | ->01.35% (146,556B) 0x5978E36: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                       |   | |                   |   ->01.35% (146,556B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|   |                       |   | |                   |     
+|   |                       |   | |                   ->00.45% (48,852B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |                       |   | |                   
+|   |                       |   | ->00.52% (56,400B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |                       |   | 
+|   |                       |   ->00.13% (14,100B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |                       |   
+|   |                       ->00.45% (48,852B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |                       
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->04.57% (497,634B) 0x5764240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| ->03.05% (332,214B) in 80 places, all below massif's threshold (1.00%)
+| | 
+| ->01.52% (165,420B) 0x9116A2D: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|   ->01.52% (165,420B) 0x91166E0: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|     ->01.52% (165,420B) 0x911334A: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|       ->01.52% (165,420B) 0x9175B25: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|         ->01.52% (165,420B) 0x9175DDC: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|           ->01.52% (165,420B) 0x916E09D: QXcbConnection::handleXcbEvent(xcb_generic_event_t*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|             ->01.52% (165,420B) 0x916E789: QXcbConnection::processXcbEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|               ->01.52% (165,420B) 0x9199326: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                 ->01.52% (165,420B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                   ->01.52% (165,420B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                     ->01.52% (165,420B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                       ->01.52% (165,420B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                         ->01.52% (165,420B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           ->01.52% (165,420B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                             ->01.52% (165,420B) 0x127F83: main (main.cpp:12)
+|                               
+->02.58% (281,280B) 0x57642DF: QArrayData::reallocateUnaligned(QArrayData*, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| ->02.56% (279,104B) 0x5766451: QByteArray::reallocData(unsigned int, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | ->02.56% (279,104B) 0x5766610: QByteArray::resize(int) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | ->02.56% (278,528B) 0x918ABC0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | | ->02.56% (278,528B) 0x918B01A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | |   ->02.56% (278,528B) 0x918B4E6: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | |     ->02.56% (278,528B) 0x918BA9F: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| | | |       ->02.56% (278,528B) 0x538190E: QBackingStore::flush(QRegion const&, QWindow*, QPoint const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+| | | |         ->02.56% (278,528B) 0x49CCF4A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |           ->02.56% (278,528B) 0x49CE897: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |             ->02.56% (278,528B) 0x49CFC10: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |               ->02.56% (278,528B) 0x49CFDC0: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                 ->02.56% (278,528B) 0x49E8384: QWidgetPrivate::syncBackingStore() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                   ->02.56% (278,528B) 0x4A00CAB: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                     ->02.56% (278,528B) 0x4B15147: QMainWindow::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                       ->02.56% (278,528B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                         ->02.56% (278,528B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                           ->02.56% (278,528B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             ->02.41% (262,144B) 0x5923487: QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | ->02.41% (262,144B) 0x4CE644A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | | ->02.41% (262,144B) 0x4CEC14C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |   ->02.41% (262,144B) 0x594CC29: QObject::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |     ->02.41% (262,144B) 0x4CF9FB2: QGraphicsScene::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |       ->02.41% (262,144B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |         ->02.41% (262,144B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+| | | |                             | |           ->02.41% (262,144B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |             ->02.41% (262,144B) 0x5923487: QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |               ->02.41% (262,144B) 0x5978E36: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| | | |                             | |                 ->02.41% (262,144B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+| | | |                             | |                   ->02.41% (262,144B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+| | | |                             | |                     
+| | | |                             | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | |                             | 
+| | | |                             ->00.15% (16,384B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | |                             
+| | | ->00.01% (576B) in 1+ places, all below ms_print's threshold (01.00%)
+| | | 
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.02% (2,176B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.73% (188,160B) 0xB0216F6: ???
+  ->01.73% (188,160B) 0xB02235B: ???
+    ->01.17% (127,680B) 0xB022657: ???
+    | ->01.17% (127,680B) 0xB025961: ???
+    |   ->01.17% (127,680B) 0xB022C0A: ???
+    |     ->01.17% (127,680B) 0xB01E653: ???
+    |       ->01.17% (127,680B) 0xB01EBF1: ???
+    |         ->01.17% (127,680B) 0xAFC15D2: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+    |           ->01.17% (127,680B) 0x9186868: QXcbWindow::create() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |             ->01.17% (127,680B) 0x9171915: QXcbIntegration::createPlatformWindow(QWindow*) const (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |               ->01.17% (127,680B) 0x51DEE14: QWindowPrivate::create(bool, unsigned long long) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    |                 ->01.17% (127,680B) 0x49F2807: QWidgetPrivate::create() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                   ->01.17% (127,680B) 0x49F2E0D: QWidget::create(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                     ->01.17% (127,680B) 0x49FFC4A: QWidgetPrivate::setVisible(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                       ->01.17% (127,680B) 0x127F7E: main (main.cpp:11)
+    |                         
+    ->00.56% (60,480B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 23  3,541,930,581       12,190,928       10,145,094     2,033,074       12,760
+ 24  3,637,820,537       10,889,920        8,843,839     2,033,129       12,952
+ 25  3,795,860,810       10,596,880        8,551,543     2,032,881       12,456
+ 26  3,890,480,904       10,893,584        8,846,294     2,032,914       14,376
+ 27  4,016,640,018       12,143,736       10,096,724     2,032,876       14,136
+ 28  4,161,716,152       12,457,352       10,411,256     2,033,112       12,984
+ 29  4,261,817,580       12,461,272       10,413,745     2,033,071       14,456
+ 30  4,361,712,931       12,190,592       10,144,702     2,033,130       12,760
+ 31  4,511,558,524       12,189,752       10,143,850     2,033,014       12,888
+ 32  4,611,519,215       12,190,192       10,144,186     2,033,078       12,928
+ 33  4,711,415,187       12,408,200       10,341,401     2,032,607       34,192
+ 34  4,861,258,459       12,090,840       10,045,278     2,032,754       12,808
+ 35  4,961,153,974       12,318,664       10,272,708     2,032,860       13,096
+ 36  5,061,050,017       12,090,216       10,044,718     2,032,738       12,760
+ 37  5,212,465,210       12,092,560       10,046,594     2,032,950       13,016
+ 38  5,313,557,748       12,091,912       10,045,494     2,033,354       13,064
+ 39  5,463,400,720       12,093,560       10,047,230     2,033,570       12,760
+ 40  5,613,244,701       12,262,312       10,216,285     2,032,851       13,176
+ 41  5,713,140,610       12,263,856       10,217,685     2,033,003       13,168
+ 42  5,813,036,798       12,261,472       10,018,888     2,229,408       13,176
+ 43  5,962,880,671       11,990,552        9,749,602     2,229,438       11,512
+ 44  6,062,777,721       11,990,688        9,749,602     2,229,438       11,648
+ 45  6,212,621,300       12,261,936       10,019,224     2,229,536       13,176
+ 46  6,312,516,906       12,262,472       10,019,765     2,229,539       13,168
+ 47  6,412,439,784       11,990,136        9,749,266     2,229,390       11,480
+81.31% (9,749,266B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.04% (5,760,000B) 0x918A24B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| ->48.04% (5,760,000B) 0x918BF7A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|   ->48.04% (5,760,000B) 0x538078C: QBackingStore::resize(QSize const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|     ->48.04% (5,760,000B) 0x49CED47: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|       ->48.04% (5,760,000B) 0x49D03D9: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|         ->48.04% (5,760,000B) 0x4A1E8DB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|           ->48.04% (5,760,000B) 0x4A1F2CF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|             ->48.04% (5,760,000B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|               ->48.04% (5,760,000B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                 ->48.04% (5,760,000B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                   ->48.04% (5,760,000B) 0x51D6DE5: QGuiApplicationPrivate::processExposeEvent(QWindowSystemInterfacePrivate::ExposeEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                     ->48.04% (5,760,000B) 0x51D7013: QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                       ->48.04% (5,760,000B) 0x51B135A: QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                         ->48.04% (5,760,000B) 0x919932D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                           ->48.04% (5,760,000B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                             ->48.04% (5,760,000B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                               ->48.04% (5,760,000B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                                 ->48.04% (5,760,000B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                   ->48.04% (5,760,000B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                     ->48.04% (5,760,000B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                       ->48.04% (5,760,000B) 0x127F83: main (main.cpp:12)
+|                                         
+->17.57% (2,106,288B) 0x521D69F: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+| ->17.57% (2,106,288B) 0x521D7CE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   ->13.07% (1,567,504B) 0xADF17C1: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/imageformats/libqjpeg.so)
+|   | ->13.07% (1,567,504B) 0xADF304E: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/imageformats/libqjpeg.so)
+|   |   ->13.07% (1,567,504B) 0x524472C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |     ->13.07% (1,567,504B) 0x5244EB8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |       ->13.07% (1,567,504B) 0x521D22A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |         ->13.07% (1,567,504B) 0x118431: GraphicPiece::paint(QPainter*, QStyleOptionGraphicsItem const*, QWidget*) (GraphicPiece.cpp:27)
+|   |           ->13.07% (1,567,504B) 0x4CF432B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |             ->13.07% (1,567,504B) 0x4CF51EF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |               ->13.07% (1,567,504B) 0x4CF5741: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                 ->13.07% (1,567,504B) 0x4D199F8: QGraphicsView::paintEvent(QPaintEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                   ->13.07% (1,567,504B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                     ->13.07% (1,567,504B) 0x4AADD51: QFrame::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       ->13.07% (1,567,504B) 0x4D18420: QGraphicsView::viewportEvent(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                         ->13.07% (1,567,504B) 0x592051A: QCoreApplicationPrivate::sendThroughObjectEventFilters(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                           ->13.07% (1,567,504B) 0x49BDA54: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                             ->13.07% (1,567,504B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                               ->13.07% (1,567,504B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                                 ->13.07% (1,567,504B) 0x49F8F49: QWidgetPrivate::sendPaintEvent(QRegion const&) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                   ->13.07% (1,567,504B) 0x49F9798: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                     ->13.07% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                       ->13.07% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                         ->13.07% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                           ->13.07% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                             ->13.07% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                               ->13.07% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                 ->13.07% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                   ->13.07% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                     ->13.07% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                     | 
+|   |                                                     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |                                                     
+|   ->03.50% (419,432B) 0x521D80C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | ->03.46% (415,080B) 0x5220EF5: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | | ->03.46% (415,080B) 0x5262056: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |   ->03.46% (415,080B) 0x526234D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |     ->03.46% (415,080B) 0x5259242: QPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |       ->03.46% (415,080B) 0x525A510: QPixmap::convertFromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |         ->03.46% (415,080B) 0x52659C6: QPixmapIconEngine::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |           ->03.46% (415,080B) 0x5268971: QIcon::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |             ->01.69% (202,500B) 0x12A4F6: Ui_Board::setupUi(QMainWindow*) (ui_board.h:64)
+|   | |             | ->01.69% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.69% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.69% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.69% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.69% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.69% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.69% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.69% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.69% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.69% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.69% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.69% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.69% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.69% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.69% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.69% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.69% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.69% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.69% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->01.69% (202,500B) 0x12A687: Ui_Board::setupUi(QMainWindow*) (ui_board.h:73)
+|   | |             | ->01.69% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.69% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.69% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.69% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.69% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.69% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.69% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.69% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.69% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.69% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.69% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.69% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.69% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.69% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.69% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.69% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.69% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.69% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.69% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->00.08% (10,080B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |             
+|   | ->00.04% (4,352B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->01.00% (119,352B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->10.00% (1,198,887B) in 779 places, all below massif's threshold (1.00%)
+| 
+->04.14% (495,931B) 0x5764240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| ->02.76% (330,511B) in 80 places, all below massif's threshold (1.00%)
+| | 
+| ->01.38% (165,420B) 0x9116A2D: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|   ->01.38% (165,420B) 0x91166E0: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|     ->01.38% (165,420B) 0x911334A: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|       ->01.38% (165,420B) 0x9175B25: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|         ->01.38% (165,420B) 0x9175DDC: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|           ->01.38% (165,420B) 0x916E09D: QXcbConnection::handleXcbEvent(xcb_generic_event_t*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|             ->01.38% (165,420B) 0x916E789: QXcbConnection::processXcbEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|               ->01.38% (165,420B) 0x9199326: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                 ->01.38% (165,420B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                   ->01.38% (165,420B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                     ->01.38% (165,420B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                       ->01.38% (165,420B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                         ->01.38% (165,420B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           ->01.38% (165,420B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                             ->01.38% (165,420B) 0x127F83: main (main.cpp:12)
+|                               
+->01.57% (188,160B) 0xB0216F6: ???
+  ->01.57% (188,160B) 0xB02235B: ???
+    ->01.06% (127,680B) 0xB022657: ???
+    | ->01.06% (127,680B) 0xB025961: ???
+    |   ->01.06% (127,680B) 0xB022C0A: ???
+    |     ->01.06% (127,680B) 0xB01E653: ???
+    |       ->01.06% (127,680B) 0xB01EBF1: ???
+    |         ->01.06% (127,680B) 0xAFC15D2: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+    |           ->01.06% (127,680B) 0x9186868: QXcbWindow::create() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |             ->01.06% (127,680B) 0x9171915: QXcbIntegration::createPlatformWindow(QWindow*) const (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |               ->01.06% (127,680B) 0x51DEE14: QWindowPrivate::create(bool, unsigned long long) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    |                 ->01.06% (127,680B) 0x49F2807: QWidgetPrivate::create() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                   ->01.06% (127,680B) 0x49F2E0D: QWidget::create(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                     ->01.06% (127,680B) 0x49FFC4A: QWidgetPrivate::setVisible(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                       ->01.06% (127,680B) 0x127F7E: main (main.cpp:11)
+    |                         
+    ->00.50% (60,480B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 48  6,512,335,072       11,991,304        9,750,442     2,229,542       11,320
+ 49  6,613,077,654       11,990,240        9,749,234     2,229,398       11,608
+ 50  6,705,551,722       11,990,544        9,749,570     2,229,446       11,528
+ 51  6,798,027,326       11,992,176        9,750,970     2,229,598       11,608
+ 52  6,890,501,431       11,990,272        9,749,302     2,229,458       11,512
+ 53  6,982,977,292       11,990,992        9,749,918     2,229,546       11,528
+ 54  7,075,451,383       11,992,176        9,751,038     2,229,658       11,480
+ 55  7,167,927,685       11,991,408        9,750,226     2,229,574       11,608
+81.31% (9,750,226B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.03% (5,760,000B) 0x918A24B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+| ->48.03% (5,760,000B) 0x918BF7A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|   ->48.03% (5,760,000B) 0x538078C: QBackingStore::resize(QSize const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|     ->48.03% (5,760,000B) 0x49CED47: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|       ->48.03% (5,760,000B) 0x49D03D9: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|         ->48.03% (5,760,000B) 0x4A1E8DB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|           ->48.03% (5,760,000B) 0x4A1F2CF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|             ->48.03% (5,760,000B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|               ->48.03% (5,760,000B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|                 ->48.03% (5,760,000B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                   ->48.03% (5,760,000B) 0x51D6DE5: QGuiApplicationPrivate::processExposeEvent(QWindowSystemInterfacePrivate::ExposeEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                     ->48.03% (5,760,000B) 0x51D7013: QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                       ->48.03% (5,760,000B) 0x51B135A: QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|                         ->48.03% (5,760,000B) 0x919932D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                           ->48.03% (5,760,000B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                             ->48.03% (5,760,000B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                               ->48.03% (5,760,000B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                                 ->48.03% (5,760,000B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                   ->48.03% (5,760,000B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                     ->48.03% (5,760,000B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                                       ->48.03% (5,760,000B) 0x127F83: main (main.cpp:12)
+|                                         
+->17.56% (2,106,288B) 0x521D69F: QImageData::create(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+| ->17.56% (2,106,288B) 0x521D7CE: QImage::QImage(QSize const&, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   ->13.07% (1,567,504B) 0xADF17C1: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/imageformats/libqjpeg.so)
+|   | ->13.07% (1,567,504B) 0xADF304E: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/imageformats/libqjpeg.so)
+|   |   ->13.07% (1,567,504B) 0x524472C: QImageReader::read(QImage*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |     ->13.07% (1,567,504B) 0x5244EB8: QImageReader::read() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |       ->13.07% (1,567,504B) 0x521D22A: QImage::load(QString const&, char const*) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   |         ->13.07% (1,567,504B) 0x118431: GraphicPiece::paint(QPainter*, QStyleOptionGraphicsItem const*, QWidget*) (GraphicPiece.cpp:27)
+|   |           ->13.07% (1,567,504B) 0x4CF432B: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |             ->13.07% (1,567,504B) 0x4CF51EF: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |               ->13.07% (1,567,504B) 0x4CF5741: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                 ->13.07% (1,567,504B) 0x4D199F8: QGraphicsView::paintEvent(QPaintEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                   ->13.07% (1,567,504B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                     ->13.07% (1,567,504B) 0x4AADD51: QFrame::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                       ->13.07% (1,567,504B) 0x4D18420: QGraphicsView::viewportEvent(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                         ->13.07% (1,567,504B) 0x592051A: QCoreApplicationPrivate::sendThroughObjectEventFilters(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                           ->13.07% (1,567,504B) 0x49BDA54: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                             ->13.07% (1,567,504B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                               ->13.07% (1,567,504B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   |                                 ->13.07% (1,567,504B) 0x49F8F49: QWidgetPrivate::sendPaintEvent(QRegion const&) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                   ->13.07% (1,567,504B) 0x49F9798: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                     ->13.07% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                       ->13.07% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                         ->13.07% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                           ->13.07% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                             ->13.07% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                               ->13.07% (1,567,504B) 0x49FA305: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                 ->13.07% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                   ->13.07% (1,567,504B) 0x49FA422: QWidgetPrivate::paintSiblingsRecursive(QPaintDevice*, QList<QObject*> const&, int, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                     ->13.07% (1,567,504B) 0x49F94A3: QWidgetPrivate::drawWidget(QPaintDevice*, QRegion const&, QPoint const&, int, QPainter*, QWidgetBackingStore*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   |                                                     | 
+|   |                                                     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |                                                     
+|   ->03.50% (419,432B) 0x521D80C: QImage::QImage(int, int, QImage::Format) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | ->03.46% (415,080B) 0x5220EF5: QImage::convertToFormat_helper(QImage::Format, QFlags<Qt::ImageConversionFlag>) const (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | | ->03.46% (415,080B) 0x5262056: QRasterPlatformPixmap::createPixmapForImage(QImage, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |   ->03.46% (415,080B) 0x526234D: QRasterPlatformPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |     ->03.46% (415,080B) 0x5259242: QPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |       ->03.46% (415,080B) 0x525A510: QPixmap::convertFromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |         ->03.46% (415,080B) 0x52659C6: QPixmapIconEngine::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |           ->03.46% (415,080B) 0x5268971: QIcon::addFile(QString const&, QSize const&, QIcon::Mode, QIcon::State) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+|   | |             ->01.69% (202,500B) 0x12A4F6: Ui_Board::setupUi(QMainWindow*) (ui_board.h:64)
+|   | |             | ->01.69% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.69% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.69% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.69% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.69% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.69% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.69% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.69% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.69% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.69% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.69% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.69% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.69% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.69% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.69% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.69% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.69% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.69% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.69% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->01.69% (202,500B) 0x12A687: Ui_Board::setupUi(QMainWindow*) (ui_board.h:73)
+|   | |             | ->01.69% (202,500B) 0x128152: Board::Board(QWidget*, GAMEMODE, QString const&, QString) (Board.cpp:11)
+|   | |             |   ->01.69% (202,500B) 0x12D1A8: LocalGameMenu::on_btnStartGame_clicked() (LocalGameMenu.cpp:17)
+|   | |             |     ->01.69% (202,500B) 0x11724B: LocalGameMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:83)
+|   | |             |       ->01.69% (202,500B) 0x1173CF: LocalGameMenu::qt_metacall(QMetaObject::Call, int, void**) (moc_LocalGameMenu.cpp:130)
+|   | |             |         ->01.69% (202,500B) 0x594C28B: QMetaObject::activate(QObject*, int, int, void**) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |           ->01.69% (202,500B) 0x4AB2805: QAbstractButton::clicked(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |             ->01.69% (202,500B) 0x4AB2A2D: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |               ->01.69% (202,500B) 0x4AB3E72: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                 ->01.69% (202,500B) 0x4AB4034: QAbstractButton::mouseReleaseEvent(QMouseEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                   ->01.69% (202,500B) 0x4A002B5: QWidget::event(QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                     ->01.69% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                       ->01.69% (202,500B) 0x49C7342: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                         ->01.69% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                           ->01.69% (202,500B) 0x49C6456: QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                             ->01.69% (202,500B) 0x4A1C35C: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                               ->01.69% (202,500B) 0x4A1F1EB: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                 ->01.69% (202,500B) 0x49BDA65: QApplicationPrivate::notify_helper(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                   ->01.69% (202,500B) 0x49C70EF: QApplication::notify(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+|   | |             |                                     ->01.69% (202,500B) 0x5920809: QCoreApplication::notifyInternal2(QObject*, QEvent*) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|   | |             |                                       
+|   | |             ->00.08% (10,080B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |             
+|   | ->00.04% (4,352B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->01.00% (119,352B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->10.00% (1,199,343B) in 779 places, all below massif's threshold (1.00%)
+| 
+->04.14% (496,435B) 0x5764240: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+| ->02.76% (331,015B) in 80 places, all below massif's threshold (1.00%)
+| | 
+| ->01.38% (165,420B) 0x9116A2D: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|   ->01.38% (165,420B) 0x91166E0: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|     ->01.38% (165,420B) 0x911334A: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so)
+|       ->01.38% (165,420B) 0x9175B25: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|         ->01.38% (165,420B) 0x9175DDC: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|           ->01.38% (165,420B) 0x916E09D: QXcbConnection::handleXcbEvent(xcb_generic_event_t*) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|             ->01.38% (165,420B) 0x916E789: QXcbConnection::processXcbEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|               ->01.38% (165,420B) 0x9199326: ??? (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+|                 ->01.38% (165,420B) 0x6900FBC: g_main_context_dispatch (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                   ->01.38% (165,420B) 0x690123F: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                     ->01.38% (165,420B) 0x69012E2: g_main_context_iteration (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.2)
+|                       ->01.38% (165,420B) 0x5978434: QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                         ->01.38% (165,420B) 0x591F3AA: QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                           ->01.38% (165,420B) 0x5927115: QCoreApplication::exec() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+|                             ->01.38% (165,420B) 0x127F83: main (main.cpp:12)
+|                               
+->01.57% (188,160B) 0xB0216F6: ???
+  ->01.57% (188,160B) 0xB02235B: ???
+    ->01.06% (127,680B) 0xB022657: ???
+    | ->01.06% (127,680B) 0xB025961: ???
+    |   ->01.06% (127,680B) 0xB022C0A: ???
+    |     ->01.06% (127,680B) 0xB01E653: ???
+    |       ->01.06% (127,680B) 0xB01EBF1: ???
+    |         ->01.06% (127,680B) 0xAFC15D2: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+    |           ->01.06% (127,680B) 0x9186868: QXcbWindow::create() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |             ->01.06% (127,680B) 0x9171915: QXcbIntegration::createPlatformWindow(QWindow*) const (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+    |               ->01.06% (127,680B) 0x51DEE14: QWindowPrivate::create(bool, unsigned long long) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+    |                 ->01.06% (127,680B) 0x49F2807: QWidgetPrivate::create() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                   ->01.06% (127,680B) 0x49F2E0D: QWidget::create(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                     ->01.06% (127,680B) 0x49FFC4A: QWidgetPrivate::setVisible(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+    |                       ->01.06% (127,680B) 0x127F7E: main (main.cpp:11)
+    |                         
+    ->00.50% (60,480B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 56  7,261,504,950       12,258,008       10,016,564     2,229,740       11,704
+ 57  7,353,979,021       11,993,296        9,751,934     2,229,874       11,488
+ 58  7,446,794,159       12,256,384       10,211,760     2,032,920       11,704
+ 59  7,539,268,915       12,262,288       10,216,173     2,032,947       13,168
+ 60  7,631,744,169       12,262,312       10,216,192     2,032,944       13,176
+ 61  7,724,218,948       12,005,352        9,684,942     2,308,626       11,784

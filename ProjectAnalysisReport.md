@@ -85,13 +85,13 @@ je funkcija biblioteke koje korisit razvojno okruženje __qt__. Time zaključuje
 
 - program je pokrenut u massifu korišćenjem komande:
 ```
-valgrind --tool=massif ./NineMensMorris
+$ valgrind --tool=massif ./NineMensMorris
 ```
 - zatim je izlaz koji je dobijen iz massif-a korišćenjem programa ms_print prusmeren
 u datoteku __massif_graph.txt__ komandom:
 
 ```
- ms_print massif.out.283 > massif_graph.txt
+ $ ms_print massif.out.283 > massif_graph.txt
 ```
 - Graf dobijen iz analize massif-a:
 ```
@@ -144,6 +144,91 @@ Number of snapshots: 87
 - Kao što vidimo massif je napravio 87 preseka hipa memorije i nama izdvojio samo neke od njih. Na grafu vidimo da je vrhunac u preseku 6 kada je potrošnja hipa oko 11.92 MB.
 Međutim i ostali preseci su slični po potrošnji i vidimo da nema nekih naglih skokova u korišćenju hip memorije.
 
+- Ponovo smo testirali program ali sada sa dodatnom opcijom koja prati zauzeće steka.
+- Program je pokrenut sa komandom:
+```
+$ valgrind --tool=massif --stacks=yes ./NineMensMorris
+```
+- I graf dobijen analizom je ispisan u odgovarajući *.txt* fajl komandom:
+```
+$ ms_print massif.out.435 > massif_graph_2.txt
+``` 
+- Dobijen graf iz izlaznog fajla massif_graph_2.txt:
+```
+--------------------------------------------------------------------------------
+Command:            ./NineMensMorris
+Massif arguments:   --stacks=yes
+ms_print arguments: massif.out.435
+--------------------------------------------------------------------------------
+
+
+    MB
+11.88^                                       :                                
+     |      #: :  @  :::  :::  :::  :  :   ::::::::::::::::::::::@::::::@:::::
+     |      #: :  @  : :  : :  : :  :  :   :::: :: :::::: :::::::@::::::@:::::
+     |      #:::::@::: :::: :::: ::::@@:::::::: :: :::::: :::::::@::::::@:::::
+     | :: ::#:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | :  : #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+     | : :: #:::: @: : :: : :: : :: :@ : :::::: :: :::::: :::::::@::::::@:::::
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   7.194
+
+Number of snapshots: 62
+ Detailed snapshots: [4 (peak), 9, 22, 47, 55]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1    158,158,623       10,074,544        9,868,277       194,099       12,168
+  2    356,616,563        8,785,312        8,577,734       195,306       12,272
+  3    535,759,662       10,113,080        9,903,837       196,227       13,016
+  4    679,344,638       12,430,648       12,221,208       196,192       13,248
+```
+- Vidimo da je korišćenje hip memorije slično kao i u prethodnom primeru, bez nekih naglih skokova u zauzeću memorije.
+- Takođe sada imamo ispunjenu statistiku o korišćenju stek memorije. Vidimo da se kreće oko dvanaest hiljada za većinu izvršavanja osim što u preseku 9 postoji nagli skok extra-heap i stacks vrednosti.
+```
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  5    827,401,122       12,206,600       11,997,560       196,280       12,760
+  6    919,875,185       10,910,256       10,699,561       196,271       14,424
+  7  1,055,126,774       12,206,320       11,997,624       196,248       12,448
+  8  1,178,987,838       10,905,272       10,696,108       196,212       12,952
+  9  1,362,233,868       12,160,424       10,357,563     1,768,717       34,144
+```
+- Ali se ona dosta brzo vraća na prosečnu u narednim.
+```
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 10  1,461,501,840       10,905,720        9,123,561     1,769,207       12,952
+ 11  1,633,562,554       12,209,696       10,164,572     2,032,108       13,016
+ 12  1,831,449,452       12,192,168       10,148,208     2,032,480       11,480
+ 13  2,010,558,760       10,895,760        8,850,209     2,032,407       13,144
+ 14  2,208,876,200       12,190,496       11,979,818       197,926       12,752
+ 15  2,369,399,978       12,190,736       10,144,686     2,032,986       13,064
+ 16  2,562,187,078       10,888,160        8,842,311     2,032,897       12,952
+ 17  2,688,349,477       12,190,400       10,144,566     2,033,026       12,808
+ 18  2,782,971,062       12,190,040       10,144,566     2,033,026       12,448
+ 19  2,909,130,794       12,190,104       10,144,202     2,033,014       12,888
+ 20  3,100,369,648       10,889,816        8,843,787     2,033,077       12,952
+ 21  3,226,531,158       12,191,128       10,145,142     2,033,058       12,928
+ 22  3,352,691,084       10,894,200        8,846,882     2,032,942       14,376
+```
 - Zaključujemo da se hip memorija uglavnom odgovorno koristi.
 
 ## Testiranje jedinica koda - QtTest
