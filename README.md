@@ -14,4 +14,4 @@
     - Clang statički analizator
 
 ## Zaključak
-- Projekat u onim delovima gde je testiran ne prikazuje velike nedostatke i dobro je napisan.
+- Projekat ima određeno curenje memorije u nekim klasama, u ostalim delovima se ponaša dobro osim par sitnih propusta.
