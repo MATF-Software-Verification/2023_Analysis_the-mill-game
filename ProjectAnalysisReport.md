@@ -384,11 +384,11 @@ Number of snapshots: 62
 
 &nbsp;
 
-- Kada pokrenemo projekat možemo da vidimo da se svi testovi završavaju uspešno.
+- Kada pokrenemo projekat možemo da vidimo da se svi testovi završavaju uspešno, osim testa testPlayerNumOfPieces(). On pada zato što kada smanjimo dovoljno puta brojač figura on može biti negativan. Ova članska promenljiva se može prepraviti da bude *unsigned*.
 
-![image](./pictures/qt_test.png)
+![image](./pictures/qt_test_2.png)
 
-- Zaključak: Sve testirane funkcije rade u skladu sa njihovim očekivanim ponašanjem.
+- Zaključak: Skoro sve testirane funkcije rade u skladu sa njihovim očekivanim ponašanjem.
 
 ## Clang statička analiza (scan-build)
 

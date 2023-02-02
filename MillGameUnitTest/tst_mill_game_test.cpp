@@ -2,6 +2,7 @@
 
 // add necessary includes here
 #include <utility>
+#include <map>
 #include <../02-the-mill-game/code/include/Player.h>
 #include <../02-the-mill-game/code/include/Field.h>
 #include <../02-the-mill-game/code/include/GameMap.h>
@@ -63,7 +64,10 @@ void mill_game_test::testPlayerNumOfPieces() {
     QCOMPARE(player->getNumOfPieces(), 2);
 
     player->decNumOfPieces();
-    QCOMPARE(player->getNumOfPieces(), 1);
+    player->decNumOfPieces();
+    player->decNumOfPieces();
+    player->decNumOfPieces();
+    QCOMPARE(player->getNumOfPieces(), 0);
 
     delete player;
 }
@@ -138,9 +142,37 @@ void mill_game_test::testGameMapInitializeFields() {
     auto boardFields = gameMap->getBoardFields();
     QCOMPARE(boardFields.size(), 24);
 
+    std::map<unsigned int, std::vector<unsigned int>> expectedNeighbours;
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(0, {1,9}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(1, {0,2,4}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(2, {1,14}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(3, {4,10}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(4, {1,3,5,7}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(5, {4,13}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(6, {7,11}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(7, {4,6,8}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(8, {7,12}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(9, {0,10,21}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(10, {3,9,11,18}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(11, {6,10,15}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(12, {8,13,17}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(13, {5,12,14,20}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(14, {2,13,23}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(15, {11,16}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(16, {15,17,19}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(17, {12,16}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(18, {10,19}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(19, {16,18,20,22}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(20, {13,19}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(21, {9,22}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(22, {19,21,23}));
+    expectedNeighbours.insert(std::pair<unsigned, std::vector<unsigned>>(23, {14,22}));
+
     for (auto field : boardFields) {
-        auto neighboursSize = field.getNeighboursIndices().size();
-        QVERIFY(neighboursSize == 2 || neighboursSize == 3 || neighboursSize == 4);
+        auto position = field.getFieldPosition();
+        auto actualNeighbours = field.getNeighboursIndices();
+        auto expectedNeighboursList = expectedNeighbours.at(position);
+        QCOMPARE(actualNeighbours, expectedNeighboursList);
     }
 
     delete gameMap;
