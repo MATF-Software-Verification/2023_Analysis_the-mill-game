@@ -1,5 +1,24 @@
 # Izveštaj analize projekta
 
+## O projektu:
+  - U ovom projektu je vršena analiza projekta The Mill Game koji se može naći
+    na adresi: https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2020-2021/02-the-mill-game/-/tree/master/. 
+
+  - The Mill Game predstavlja implementaciju igre mice gde igrači postavljaju 
+    figure na polja koja su horizontalno i vertikalno povezana u redove. Kada jedan igrač poveže tri polja u nizu on može ukloniti neku figuru svog protvinika. \
+    Kada igrači postave sve figure na tablu onda ih mogu pomerati horizonatalno ili vertikalno po slobodnim susednim poljima.
+    Svaki igrač počinje sa devet figura i igra se dok jedan igrač ne ostane bez figura ili bez poteza.
+
+  - Igra nudi tri načina igre:
+      - Igranje protiv kompjutera
+      - Igranje dva igrača lokalno
+      - Igranje dva igrača preko mreže.
+
+  &nbsp;
+
+  - Projekat je implementiran u jeziku *C++* korišćenjem radnog okruženja *Qt*.
+
+
 ## Valgrind - Memcheck
 - Korišćenjem alata Memcheck programa Valgrind izvedena je analiza alociranja memorije
 prilikom izvršavanja programa The Mill game.
