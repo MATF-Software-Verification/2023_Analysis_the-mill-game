@@ -1,0 +1,175 @@
+==784== Memcheck, a memory error detector
+==784== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==784== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==784== Command: ./NineMensMorris
+==784== Parent PID: 10
+==784== 
+==784== 
+==784== HEAP SUMMARY:
+==784==     in use at exit: 141,244 bytes in 1,091 blocks
+==784==   total heap usage: 6,327 allocs, 5,236 frees, 856,798 bytes allocated
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 92 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x1225A7: GameMap::initializeLines() (GameMap.cpp:73)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 93 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x1225F9: GameMap::initializeLines() (GameMap.cpp:74)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 94 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x122657: GameMap::initializeLines() (GameMap.cpp:75)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 95 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x1226AC: GameMap::initializeLines() (GameMap.cpp:76)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 96 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x122701: GameMap::initializeLines() (GameMap.cpp:78)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 97 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x122753: GameMap::initializeLines() (GameMap.cpp:79)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 98 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x1227B1: GameMap::initializeLines() (GameMap.cpp:80)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 99 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x122806: GameMap::initializeLines() (GameMap.cpp:81)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 100 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x12285B: GameMap::initializeLines() (GameMap.cpp:83)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 101 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x1228AD: GameMap::initializeLines() (GameMap.cpp:84)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 102 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x12290B: GameMap::initializeLines() (GameMap.cpp:85)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 103 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x122960: GameMap::initializeLines() (GameMap.cpp:86)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 104 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x1229B5: GameMap::initializeLines() (GameMap.cpp:88)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 105 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x122A07: GameMap::initializeLines() (GameMap.cpp:89)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 106 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x122A59: GameMap::initializeLines() (GameMap.cpp:90)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 107 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x122AAE: GameMap::initializeLines() (GameMap.cpp:91)
+==784==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 3,240 (216 direct, 3,024 indirect) bytes in 9 blocks are definitely lost in loss record 124 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x123C66: GameMap::initializePieces() (GameMap.cpp:192)
+==784==    by 0x121C82: GameMap::GameMap() (GameMap.cpp:27)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 3,240 (216 direct, 3,024 indirect) bytes in 9 blocks are definitely lost in loss record 125 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x123CA0: GameMap::initializePieces() (GameMap.cpp:193)
+==784==    by 0x121C82: GameMap::GameMap() (GameMap.cpp:27)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 8,640 (576 direct, 8,064 indirect) bytes in 24 blocks are definitely lost in loss record 134 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x1253AC: Field::Field(unsigned int) (Field.h:11)
+==784==    by 0x123807: GameMap::initializeFields() (GameMap.cpp:151)
+==784==    by 0x121C5E: GameMap::GameMap() (GameMap.cpp:24)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== LEAK SUMMARY:
+==784==    definitely lost: 1,392 bytes in 58 blocks
+==784==    indirectly lost: 19,488 bytes in 58 blocks
+==784==      possibly lost: 0 bytes in 0 blocks
+==784==    still reachable: 120,364 bytes in 975 blocks
+==784==         suppressed: 0 bytes in 0 blocks
+==784== Reachable blocks (those to which a pointer was found) are not shown.
+==784== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==784== 
+==784== For lists of detected and suppressed errors, rerun with: -s
+==784== ERROR SUMMARY: 19 errors from 19 contexts (suppressed: 0 from 0)

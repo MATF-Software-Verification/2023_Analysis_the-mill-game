@@ -77,8 +77,108 @@ komandom:
 
 - Kao što vidimo imamo definitivni gubitak 256 bajta, ali kada pogledamo gde se ta greška desila vidimo da su to bibliotečke funkcije koje valgrind ne može da isprati. Zbog toga nije moguće locirati ovu grešku.
 
-- Takođe vidimo da imamo mogući gubitak 352 bajta. Kada ispitamo stek poziva vidimo da je mogući gubitak izazvao poziv funkcije __calloc__ čiji je krajnji pozivaoc konstruktor klase __MainMenu__ u __main__ funkciji projekta. Međutim, konstruktor klase __MainMenu__
-je funkcija biblioteke koje korisit razvojno okruženje __qt__. Time zaključujemo da ne postoji gubitak memorije koji je izazvan od strane programera. 
+- Takođe vidimo da imamo mogući gubitak 352 bajta. Kada ispitamo stek poziva vidimo da je mogući gubitak izazvao poziv funkcije __calloc__ čiji je krajnji pozivaoc konstruktor klase __MainMenu__ u __main__ funkciji projekta. Nažalost ne možemo u potpunosti da ispratimo koje su to funkcije dovele do curenja jer su pozivane neke qt funkcije.
+
+- Rad funkcija Qt otežava rad memcheck-a. Zbog toga ćemo izmeniti main funkciju u kome kojoj ćemo sada izvršavati samo određene delove koda i njih možemo lakše ispratiti od rada kompletne aplikacije.
+
+- naša izmenjena funkcija:
+```
+int customMain_1(int argc, char* argv[]) {
+    QApplication a(argc, argv);
+
+    Player* player1 = new Player(FIELDSTATE::PLAYER_1, "the first player");
+    Player* player2 = new Player(FIELDSTATE::PLAYER_2, "the second player");
+
+    Game* game = new Game(player1, player2, GAMEMODE::LOCAL);
+
+    GameMap* map = game->getGameMap();
+
+    delete game;
+
+    a.exit(0);
+    return 0;
+}
+
+int main(int argc, char* argv[]) {
+    //return regularMain(argc, argv);
+    return customMain_1(argc, argv);
+}
+```
+
+- Sada je izlaz sačuvan u fajlu *memcheck_out.txt*. Ima dosta curenja memorije, ali izdvajamo sledeće greške:
+
+```
+==784== 3,240 (216 direct, 3,024 indirect) bytes in 9 blocks are definitely lost in loss record 125 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x123CA0: GameMap::initializePieces() (GameMap.cpp:193)
+==784==    by 0x121C82: GameMap::GameMap() (GameMap.cpp:27)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+==784== 8,640 (576 direct, 8,064 indirect) bytes in 24 blocks are definitely lost in loss record 134 of 136
+==784==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==784==    by 0x1253AC: Field::Field(unsigned int) (Field.h:11)
+==784==    by 0x123807: GameMap::initializeFields() (GameMap.cpp:151)
+==784==    by 0x121C5E: GameMap::GameMap() (GameMap.cpp:24)
+==784==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==784==    by 0x1280FB: customMain_1(int, char**) (main.cpp:21)
+==784==    by 0x128227: main (main.cpp:33)
+==784== 
+```
+- Prva greška ukazuje na to da kada inicijalizujemo figure dolazi do curenja memorije. Kada odemo u klasu *GameMap* vidimo da u njenom destruktoru poziva funkcija *clear()* nad vektorima gde se čuvaju figure. Ovo nije ispravan način oslobađanja sadržaja vektora jer se brišu samo adrese a ostaje na hipu.
+
+- Kada zamenimo stari destruktor:
+```
+GameMap::~GameMap() {
+    bluePieces.clear();
+    redPieces.clear();
+}
+```
+- Novim:
+```
+GameMap::~GameMap() {
+    for (auto piece : bluePieces) {
+        delete piece;
+    }
+    for (auto piece : redPieces) {
+        delete piece;
+    }
+    //bluePieces.clear();
+    //redPieces.clear();
+}
+```
+- Više nemamo tu grešku kada pokrenemo valgrind.
+- Druga greška je izazvana alokacijom objekta klase *GraphicPiece* ali dobijemo segmentation fault kada stavimo brisanje tog objekta u destruktor.
+
+- Takođe imamo puno grešaka oblika:
+```
+  ==1131== 360 (24 direct, 336 indirect) bytes in 1 blocks are definitely lost in loss record 107 of 132
+==1131==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1131==    by 0x122BA8: GameMap::initializeLines() (GameMap.cpp:97)
+==1131==    by 0x121C6A: GameMap::GameMap() (GameMap.cpp:25)
+==1131==    by 0x11A081: Game::Game(Player*, Player*, GAMEMODE) (Game.cpp:7)
+==1131==    by 0x128259: customMain_1(int, char**) (main.cpp:21)
+==1131==    by 0x128385: main (main.cpp:33)
+==1131== 
+```
+- Kada modifikujemo konstruktor klase *GameMap* tako da sada izgleda ovako:
+```
+GameMap::~GameMap() {
+    for (auto piece : bluePieces) {
+        delete piece;
+    }
+    for (auto piece : redPieces) {
+        delete piece;
+    }
+    for (auto line : lines) {
+        delete line;
+    }
+}
+```
+- Sve te greške su popravljene.
+
+- **Zaključak:** *GameMap* klasa ima loše napisan destruktor i ne oslobađa većinu objekata inicijalizovanu u njenim vektorima.
 
 ## Valgrind - Massif
 - korišćenjem alata massif na projektu The Mill Game izvedena je analiza preseka stanja hipa programa tokom njegovog izvršavanja.
